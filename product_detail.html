@@ -48,94 +48,91 @@
       <!-- Default box -->
       <div class="card card-solid">
         <div class="card-body">
+
           <div class="row">
-            <div class="col-12 col-sm-6">
-              <h3 class="d-inline-block d-sm-none">Modern Lamp Review</h3>
-              <div class="col-12" style="background-color:black;">
-                <img src="assets/img/modern-lamp.png" class="product-image" alt="Product Image">
+          
+            <div class="col-12 col-sm-6 " >
+              <h3 class="d-inline-block d-sm-none">Hanging Lamp 1 Black Review  </h3>
+              <div class="col-6" style="background-color:white;">
+                <img src="assets/img/hanging1/hanging1-black.png" id="productImage" class="product-image" alt="Product Image">
               </div>
-              <div class="col-12 product-image-thumbs" >
-                <div class="product-image-thumb active" style="background-color:black;"><img src="assets/img/modern-lamp.png" alt="Product Image"></div>
-                <div class="product-image-thumb"  style="background-color:black;"><img src="assets/img/modern-lamp.png" alt="Product Image"></div>
-                <div class="product-image-thumb"  style="background-color:black;"><img src="assets/img/modern-lamp.png" alt="Product Image"></div>
-                <div class="product-image-thumb"  style="background-color:black;"><img src="assets/img/modern-lamp.png" alt="Product Image"></div>
-                <div class="product-image-thumb"  style="background-color:black;"><img src="assets/img/modern-lamp.png" alt="Product Image"></div>
+              <div class="ribbon-wrapper" id="ribbonWrapper" style="display:none;">
+                <div class="ribbon bg-danger">
+                  Sold out
+                </div>
+              </div>
+              <div class="col-12 product-image-thumbs " >
+                <div class="product-image-thumb " style="">
+                  <img src="assets/img/hanging1/hanging1-black.png" id="productImage" alt="Product Image">
+                </div>
+                <div class="product-image-thumb"  style="background-color:white;"><img src="assets/img/hanging1/hanging1-green.png" id="productImage" alt="Product Image"></div>
+                <div class="product-image-thumb"  style="background-color:white;"><img src="assets/img/hanging1/hanging1-blue.png" id="productImage" alt="Product Image"></div>
+                <div class="product-image-thumb"  style="background-color:white;"><img src="assets/img/hanging1/hanging1-purple.png" id="productImage" alt="Product Image"></div>
+                <div class="product-image-thumb"  style="background-color:white;"><img src="assets/img/hanging1/hanging1-red.png" id="productImage" alt="Product Image"></div>
               </div>
             </div>
             <div class="col-12 col-sm-6">
-              <h3 class="my-3">LOWA Men’s Renegade GTX Mid Hiking Boots Review</h3>
-              <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terr.</p>
+              <h3 class="my-3">Hanging Lamp 1 Black Review ( 68% OFF )</h3>
+              <p>Hanging Lamp 1 Black.</p>
 
               <hr>
-              <h4>Available Colors</h4>
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-default text-center active">
-                  <input type="radio" name="color_option" id="color_option_a1" autocomplete="off" checked>
+              <h4> Stock (<span id="colorAmount"> 0 </span>) </h4>
+              
+              <h4 class="" id="colorTitle">Available Colors <br>   </h4>
+              <div class="btn-group btn-group-toggle" data-toggle="buttons" >
+ 
+                <label class="btn btn-sm btn-default text-center active">
+                  <input type="checkbox" name="color_option" id="color_option_a1" autocomplete="off" onclick="updateImage('green')" >
                   Green
                   <br>
                   <i class="fas fa-circle fa-2x text-green"></i>
                 </label>
-                <label class="btn btn-default text-center">
-                  <input type="radio" name="color_option" id="color_option_a2" autocomplete="off">
+                <label class="btn btn-sm btn-default text-center">
+                  <input type="checkbox" name="color_option" id="color_option_a2" autocomplete="off" onclick="updateImage('blue')">
                   Blue
                   <br>
                   <i class="fas fa-circle fa-2x text-blue"></i>
                 </label>
-                <label class="btn btn-default text-center">
-                  <input type="radio" name="color_option" id="color_option_a3" autocomplete="off">
+                <label class="btn btn-sm btn-default text-center">
+                  <input type="checkbox" name="color_option" id="color_option_a3" autocomplete="off" onclick="updateImage('purple')">
                   Purple
                   <br>
                   <i class="fas fa-circle fa-2x text-purple"></i>
                 </label>
-                <label class="btn btn-default text-center">
-                  <input type="radio" name="color_option" id="color_option_a4" autocomplete="off">
+                <label class="btn btn-sm btn-default text-center">
+                  <input type="checkbox" name="color_option" id="color_option_a4" autocomplete="off" onclick="updateImage('red')">
                   Red
                   <br>
                   <i class="fas fa-circle fa-2x text-red"></i>
                 </label>
-                <label class="btn btn-default text-center">
-                  <input type="radio" name="color_option" id="color_option_a5" autocomplete="off">
+                <label class="btn btn-sm btn-default text-center" hidden>
+                  <input type="checkbox" name="color_option" id="color_option_a5" autocomplete="off" onclick="updateImage('orange')">
                   Orange
                   <br>
                   <i class="fas fa-circle fa-2x text-orange"></i>
                 </label>
-              </div>
-
-              <h4 class="mt-3">Size <small>Please select one</small></h4>
-              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                <label class="btn btn-default text-center">
-                  <input type="radio" name="color_option" id="color_option_b1" autocomplete="off">
-                  <span class="text-xl">S</span>
+                <label class="btn btn-sm btn-default text-center active">
+                  <input type="checkbox" name="color_option" id="color_option_a6" autocomplete="off" onclick="updateImage('black')" checked>
+                  Black
                   <br>
-                  Small
-                </label>
-                <label class="btn btn-default text-center">
-                  <input type="radio" name="color_option" id="color_option_b2" autocomplete="off">
-                  <span class="text-xl">M</span>
-                  <br>
-                  Medium
-                </label>
-                <label class="btn btn-default text-center">
-                  <input type="radio" name="color_option" id="color_option_b3" autocomplete="off">
-                  <span class="text-xl">L</span>
-                  <br>
-                  Large
-                </label>
-                <label class="btn btn-default text-center">
-                  <input type="radio" name="color_option" id="color_option_b4" autocomplete="off">
-                  <span class="text-xl">XL</span>
-                  <br>
-                  Xtra-Large
+                  <i class="fas fa-circle fa-2x text-black"></i>
                 </label>
               </div>
 
-              <div class="bg-gray py-2 px-3 mt-4">
-                <h2 class="mb-0">
-                  $80.00
-                </h2>
-                <h4 class="mt-0">
-                  <small>Ex Tax: $80.00 </small>
-                </h4>
+
+
+              <div class="bg-gray py-2 px-3 mt-4"> 
+                <div class="d-flex">
+                  <h5 class="mb-0 ">
+                     <b>Rp 12.500.000</b>  
+                  </h5> &nbsp;&nbsp;&nbsp;
+                  <h6 class="mb-0 ">
+                     <s> Rp 18.500.000</s>
+                  </h6>
+                </div>
+                <h6 class="mt-0 ">
+                  <small>Tax: 11% </small>
+                </h6>
               </div>
 
               <div class="mt-4">
@@ -212,8 +209,45 @@
 <script src="adminlte-product-asset/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="adminlte-product-asset/dist/js/adminlte.min.js"></script>
-<script>
 
+
+
+
+<script>
+    function updateImage(color) {
+        var colorTitlePath = 'bg-' + color;
+        var imagePath = 'assets/img/hanging1/hanging1-' + color + '.png';
+        var ribbonWrapperSoldOut = document.getElementById('ribbonWrapper');
+        var colorAmount = document.getElementById('colorAmount');
+
+        document.getElementById('productImage').src = imagePath;
+        document.getElementById('colorTitle').className = colorTitlePath
+        
+        // ribbonWrapper.style.display = (color == 'red') ? 'block' : 'none';
+
+        if(color == 'red'){
+          ribbonWrapperSoldOut.style.display = 'none';
+          colorAmount.textContent = '30';
+        }else if(color == 'black'){
+          ribbonWrapperSoldOut.style.display = 'block';
+          colorAmount.textContent = '0';
+        }else if(color == 'green'){
+          ribbonWrapperSoldOut.style.display = 'block';
+          colorAmount.textContent = '0';
+        }else if(color == 'blue'){
+          ribbonWrapperSoldOut.style.display = 'none';
+          colorAmount.textContent = '14';
+        }else if(color == 'purple'){
+          ribbonWrapperSoldOut.style.display = 'none';
+          colorAmount.textContent = '21';
+        }else{
+          ribbonWrapperSoldOut.style.display = 'none';
+          colorAmount.textContent = '';
+        }
+    }
 </script>
+
+
+
 </body>
 </html>

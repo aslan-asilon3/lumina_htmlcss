@@ -1,0 +1,1842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Customers Page</title>
+
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+    <!-- DataTables -->
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+</head>
+<body class="hold-transition sidebar-mini">
+<!-- Site wrapper -->
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="index3.html" class="nav-link">Home</a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="#" class="nav-link">Contact</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Navbar Search -->
+      <li class="nav-item">
+        <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+          <i class="fas fa-search"></i>
+        </a>
+        <div class="navbar-search-block">
+          <form class="form-inline">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                  <i class="fas fa-search"></i>
+                </button>
+                <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </li>
+
+      <!-- Messages Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-comments"></i>
+          <span class="badge badge-danger navbar-badge">3</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Brad Diesel
+                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">Call me whenever you can...</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  John Pierce
+                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">I got your message bro</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <!-- Message Start -->
+            <div class="media">
+              <img src="dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
+              <div class="media-body">
+                <h3 class="dropdown-item-title">
+                  Nora Silvester
+                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
+                </h3>
+                <p class="text-sm">The subject goes here</p>
+                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
+              </div>
+            </div>
+            <!-- Message End -->
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
+        </div>
+      </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span class="badge badge-warning navbar-badge">15</span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header">15 Notifications</span>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-envelope mr-2"></i> 4 new messages
+            <span class="float-right text-muted text-sm">3 mins</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-users mr-2"></i> 8 friend requests
+            <span class="float-right text-muted text-sm">12 hours</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item">
+            <i class="fas fa-file mr-2"></i> 3 new reports
+            <span class="float-right text-muted text-sm">2 days</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="control-sidebar" data-slide="true" href="#" role="button">
+          <i class="fas fa-th-large"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link">
+      <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Alexander Pierce</a>
+        </div>
+      </div>
+
+      <!-- SidebarSearch Form -->
+      <div class="form-inline">
+        <div class="input-group" data-widget="sidebar-search">
+          <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+          <div class="input-group-append">
+            <button class="btn btn-sidebar">
+              <i class="fas fa-search fa-fw"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link">
+              <i class="nav-icon fa fa-tachometer-alt"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Catalog
+                <i class="fa fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="products-erp.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Categories</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manufacturers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Reviews</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Tags</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Attributes
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Product Attributes</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Spesification Attributes</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Checkout Attributes</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Sales
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Orders</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Shipments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Return Requests</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Recurring Payments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Gift Cards</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Shopping Carts and Wishlist</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Customers
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Customer Roles</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Online Customers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Vendors</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Type</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>GDPR Requests (log) </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Promotions
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Discounts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Affiliates</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Newsletter Subscribers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Campaigns</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Activity Type</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>GDPR Requests (log) </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-edit"></i>
+              <p>
+                Content Management
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/forms/general.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Topics (Pages)</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/advanced.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Message Templates</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/editors.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>News Items</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>News Comments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Blog Posts</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Blog Comments</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Polls </p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/forms/validation.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Forums </p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Configuration
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Settings
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>General Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customer Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Order Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Shipping Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Catalog Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Shopping Cart Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Reward Points</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>GDPR Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Vendor Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Blog Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>News Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Forum Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Media Settings</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>All Settings (Advances)</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Email Accounts</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Stores</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Countries</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Languages</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Currencies</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Payment Methods</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Payment Restrictions</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Providers</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Tax Categories</p>
+                    </a>
+                  </li>
+                  
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        Shipping
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Shipping Providers</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Warehouses</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Pickup Points</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Dates and Ranges</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Measures</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  
+
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>
+                        POS
+                        <i class="fas fa-angle-left right"></i>
+                      </p>
+                    </a>
+                    <ul class="nav nav-treeview">
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>PayPal Zettle</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Accesss control list</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Widgets</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>
+                            Authentication
+                            <i class="fas fa-angle-left right"></i>
+                          </p>
+                        </a>
+                        <ul class="nav nav-treeview">
+                          <li class="nav-item">
+                            <a href="pages/examples/login.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>External Authentication</p>
+                            </a>
+                          </li>
+                          <li class="nav-item">
+                            <a href="pages/examples/login.html" class="nav-link">
+                              <i class="far fa-circle nav-icon"></i>
+                              <p>Multi-factor Authentication</p>
+                            </a>
+                          </li>
+                          
+                        </ul>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Web API</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>Local Plugins</p>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="pages/examples/login.html" class="nav-link">
+                          <i class="far fa-circle nav-icon"></i>
+                          <p>All Plugins and Themes</p>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Products</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Categories</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Manufacturers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Reviews</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product Tags</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                System
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>System Informastion</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Log</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Warnings</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Maintenance</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Message Queue</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Schedule Tasks</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Search Engine Friendly Pages Names</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Templates</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Reports
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Sales Summary</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Low Stock</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Bestsellers</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Product never purchased</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Country Sales</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>
+                    Customer Reports
+                    <i class="fas fa-angle-left right"></i>
+                  </p>
+                </a>
+                <ul class="nav nav-treeview">
+                  <li class="nav-item">
+                    <a href="pages/examples/login.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Registered Customer</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/register.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customerby order total</p>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="pages/examples/forgot-password.html" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Customer by number of order</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Help
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Training</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Documentation</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Community Forums</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Premium Support Services</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="pages/examples/lockscreen.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Solution Partners</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a href="dashboard-erp.html" class="nav-link">
+              <i class="nav-icon fa fa-sign-out-alt"></i>
+              <p>
+                Sign Out
+              </p>
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row">
+
+                <div class="col-sm-12" style="display:flex;">
+                    <div class="col-sm-4">
+                        <h1>Customers</h1>
+                    </div>
+
+                    <div class="col-sm-8">
+                        <div class="float-right">
+                            <a class="btn btn-primary" href="/Admin/Product/Create">
+                                <i class="fas fa-plus-square"></i>
+                                Add new
+                            </a>
+
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">
+                                    <i class="fas fa-download"></i>
+                                    Export
+                                </button>
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <span class="caret"></span>
+                                    <span class="sr-only">&nbsp;</span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li class="dropdown-item">
+                                        <button type="submit" name="exportxml-all" formaction="/Admin/Product/ExportToXml">
+                                            <i class="far fa-file-code"></i>
+                                            Export to XML (all found)
+                                        </button>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <button type="button" id="exportxml-selected">
+                                            <i class="far fa-file-code"></i>
+                                            Export to XML (selected)
+                                        </button>
+                                    </li>
+                                    <li class="dropdown-divider"></li>
+                                    <li class="dropdown-item">
+                                        <button type="submit" name="exportexcel-all" formaction="/Admin/Product/ExportToExcel">
+                                            <i class="far fa-file-excel"></i>
+                                            Export to Excel (all found)
+                                        </button>
+                                    </li>
+                                    <li class="dropdown-item">
+                                        <button type="button" id="exportexcel-selected">
+                                            <i class="far fa-file-excel"></i>
+                                            Export to Excel (selected)
+                                        </button>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
+    </section>
+
+
+    <!-- Main content -->
+    <section class="content">
+
+        <div class="card card-default color-palette-box">
+          <button class="card-header" type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+            <h3 class="card-title">
+              <i class="fas fa-search"></i>
+              Search
+            </h3>
+          </button>
+          <div class="card-body">
+            <div class="row">
+                <div class="col-sm-6">
+                    <!-- text input -->
+                    <div class="form-group">
+                        <div title="A product name." data-toggle="tooltip" class="ico-help"> <label>Email</label> <i class="fas fa-question-circle"></i></div>
+                        <input type="text" class="form-control" placeholder="Enter ...">
+                    </div>
+
+                    <div class="form-group">
+                        <div title="A product name." data-toggle="tooltip" class="ico-help"> <label>First Name</label> <i class="fas fa-question-circle"></i></div>
+                        <input type="text" class="form-control" placeholder="Enter ...">
+                    </div>
+
+                    <div class="form-group">
+                        <div title="A product name." data-toggle="tooltip" class="ico-help"> <label>Last Name</label> <i class="fas fa-question-circle"></i></div>
+                        <input type="text" class="form-control" placeholder="Enter ...">
+                    </div>
+
+                    <div class="form-group">
+                        <div title="A product name." data-toggle="tooltip" class="ico-help"> <label>Date of Bird</label> <i class="fas fa-question-circle"></i></div>
+                        <div class="col-10 d-flex">
+                            <div class="col-md-0">
+                                <select class="form-control" data-val="true" data-val-required="The Manufacturer field is required." id="SearchManufacturerId" name="SearchManufacturerId"><option selected="selected" value="0">Month</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                </select>
+                            </div>
+                            <div class="col-md-0">
+                                <select class="form-control" data-val="true" data-val-required="The Manufacturer field is required." id="SearchManufacturerId" name="SearchManufacturerId"><option selected="selected" value="0">Day</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div title="Check to search in subcategories." data-toggle="tooltip" class="ico-help"> <label>Search subcategories</label> <i class="fas fa-question-circle"></i></div>
+                        <div class="col-md-0">
+                            <input class="check-box" data-val="true" data-val-required="The Search subcategories field is required." id="SearchIncludeSubCategories" name="SearchIncludeSubCategories" type="checkbox" value="true" />
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div title="Search by a specific manufacturer." data-toggle="tooltip" class="ico-help"> <label>Manufacturer</label> <i class="fas fa-question-circle"></i></div>
+                        <div class="col-md-0">
+                        <select class="form-control" data-val="true" data-val-required="The Manufacturer field is required." id="SearchManufacturerId" name="SearchManufacturerId"><option selected="selected" value="0">All</option>
+                        <option value="1">Apple</option>
+                        <option value="2">HP</option>
+                        <option value="3">Nike</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group ">
+                        <div title="Search by a specific vendor." data-toggle="tooltip" class="ico-help"> <label>Vendor</label> <i class="fas fa-question-circle"></i></div>
+                        <div class="col-md-0">
+                        <select class="form-control" data-val="true" data-val-required="The Vendor field is required." id="SearchVendorId" name="SearchVendorId"><option selected="selected" value="0">All</option>
+                            <option value="1">Vendor 1</option>
+                            <option value="2">Vendor 2</option>
+                            </select>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <div title="Search by a specific warehouse." data-toggle="tooltip" class="ico-help"> <label>Warehouse</label> <i class="fas fa-question-circle"></i></div>
+                        <div class="col-md-8">
+                        <select class="form-control" data-val="true" data-val-required="The Warehouse field is required." id="SearchWarehouseId" name="SearchWarehouseId"><option selected="selected" value="0">All</option>
+                        <option value="1">Warehouse 1 (New York)</option>
+                        <option value="2">Warehouse 2 (Los Angeles)</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div title="Search by a product type." data-toggle="tooltip" class="ico-help"> <label>Product type</label> <i class="fas fa-question-circle"></i></div>
+                        <div class="col-md-8">
+                        <select class="form-control" data-val="true" data-val-required="The Product type field is required." id="SearchProductTypeId" name="SearchProductTypeId"><option selected="selected" value="0">All</option>
+                        <option value="5">Simple</option>
+                        <option value="10">Grouped (product with variants)</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div title="Search by a &quot;Published&quot; property." data-toggle="tooltip" class="ico-help"> <label>Published</label> <i class="fas fa-question-circle"></i></div>
+                        <div class="col-md-0">
+                        <select class="form-control" data-val="true" data-val-required="The Published field is required." id="SearchPublishedId" name="SearchPublishedId"><option selected="selected" value="0">All</option>
+                        <option value="1">Published only</option>
+                        <option value="2">Unpublished only</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div title="Enter product SKU and click Go." data-toggle="tooltip" class="ico-help"> <label>Go directly to product SKU</label> <i class="fas fa-question-circle"></i></div>
+                        <input class="form-control text-box single-line" id="GoDirectlyToSku" name="GoDirectlyToSku" type="text" value />
+                        <span class="input-group-append">
+                            <button type="submit" id="go-to-product-by-sku" name="go-to-product-by-sku" class="btn btn-info btn-flat">
+                            Go
+                            </button>
+                        </span>
+                    </div>
+
+                </div>
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="text-center col-12">
+                    <button type="button" id="search-products" class="btn btn-primary btn-search">
+                    <i class="fas fa-search"></i>
+                    Search
+                    </button>
+                </div>
+            </div>
+          </div>
+          <!-- /.card-body -->
+        </div>
+        
+
+
+<section class="content">
+<div class="container-fluid">
+<div class="form-horizontal">
+<nop-cards id="customer-cards">
+<nop-card><div class="card card-secondary card-outline" data-card-name="customer-info" data-hideAttribute="CustomerPage.HideInfoBlock" id="customer-info"><div class="card-header with-border clearfix"><div class="card-title"><i class="fas fa-info"></i>Customer info</div><div class="card-tools float-right"><button class="btn btn-tool" data-card-widget="collapse" type="button"><i class="fa toggle-icon fa-minus"></i></button></div></div>
+<div class="card-body">
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="Email">Email</label><div title="The customer&#39;s email." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input class="form-control text-box single-line" data-val="true" data-val-length="&#x27;Email&#x27; must be between 0 and 1000 characters." data-val-length-max="1000" data-val-length-min="0" id="Email" name="Email" type="email" value="dineshkasture3599@gmail.com" />
+<span class="field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="Password">Password</label><div title="The customer&#39;s password." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="input-group">
+<input autocomplete="new-password" class="form-control text-box single-line password" id="Password" name="Password" type="password" />
+<div class="input-group-append">
+<button type="submit" name="changepassword" class="btn btn-info">
+Change password
+</button>
+</div>
+</div>
+<span class="field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="FirstName">First name</label><div title="The customer&#39;s first name." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input class="form-control text-box single-line" data-val="true" data-val-length="&#x27;First Name&#x27; must be between 0 and 1000 characters." data-val-length-max="1000" data-val-length-min="0" id="FirstName" name="FirstName" type="text" value="Dinesh" />
+<span class="field-validation-valid" data-valmsg-for="FirstName" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="LastName">Last name</label><div title="The customer&#39;s last name." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input class="form-control text-box single-line" data-val="true" data-val-length="&#x27;Last Name&#x27; must be between 0 and 1000 characters." data-val-length-max="1000" data-val-length-min="0" id="LastName" name="LastName" type="text" value="Kasture" />
+<span class="field-validation-valid" data-valmsg-for="LastName" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="Gender">Gender</label><div title="The customer&#39;s gender." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="raw">
+<div class="form-check">
+<input type="radio" class="form-check-input" name="Gender" id="Gender_Male" value="M" checked>
+<label class="form-check-label" for="Gender_Male">
+Male
+</label>
+</div>
+<div class="form-check">
+<input type="radio" class="form-check-input" name="Gender" id="Gender_Female" value="F">
+<label class="form-check-label" for="Gender_Female">
+Female
+</label>
+</div>
+</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="DateOfBirth">Date of birth</label><div title="The customer&#39;s date of birth." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input id="DateOfBirth" name="DateOfBirth" />
+<span class="field-validation-valid" data-valmsg-for="DateOfBirth" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="Company">Company name</label><div title="The company name." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input class="form-control text-box single-line" data-val="true" data-val-length="&#x27;Company&#x27; must be between 0 and 1000 characters." data-val-length-max="1000" data-val-length-min="0" id="Company" name="Company" type="text" value="OMKAR pvt ltd" />
+<span class="field-validation-valid" data-valmsg-for="Company" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="IsTaxExempt">Is tax exempt</label><div title="Determines whether the customer is tax exempt." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input class="check-box" data-val="true" data-val-required="The Is tax exempt field is required." id="IsTaxExempt" name="IsTaxExempt" type="checkbox" value="true" />
+<span class="field-validation-valid" data-valmsg-for="IsTaxExempt" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="SelectedNewsletterSubscriptionStoreIds">Newsletter</label><div title="Choose stores to subscribe to newsletter." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="input-group-append">
+<div class="input-group">
+<select id="SelectedNewsletterSubscriptionStoreIds" multiple="multiple" name="SelectedNewsletterSubscriptionStoreIds"><option value="1">Your store name</option>
+<option value="2">Test store 2</option>
+</select>
+</div>
+<div class="input-group-btn"></div>
+</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="SelectedCustomerRoleIds">Customer roles</label><div title="Choose customer roles of this user." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="input-group-append input-group-required">
+<div class="input-group">
+<select id="SelectedCustomerRoleIds" multiple="multiple" name="SelectedCustomerRoleIds"><option value="1">Administrators</option>
+<option value="6">Bali123</option>
+<option value="2">Forum Moderators</option>
+<option value="4">Guests</option>
+<option selected="selected" value="3">Registered</option>
+<option value="5">Vendors</option>
+</select>
+</div>
+<div class="input-group-btn">
+<span class="required">*</span>
+</div>
+</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="VendorId">Manager of vendor</label><div title="Choose a vendor associated to this customer account. When associated this customer will be able to login to the chosen vendor portal and manage his products and orders." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<select class="form-control" data-val="true" data-val-required="The Manager of vendor field is required." id="VendorId" name="VendorId"><option value="0">Not a vendor</option>
+<option selected="selected" value="1">Vendor 1</option>
+<option value="2">Vendor 2</option>
+</select>
+<span class="field-validation-valid" data-valmsg-for="VendorId" data-valmsg-replace="true"></span>
+<em>Note: if you have a vendor associated with this customer, then also ensure it is in "Vendors" customer role.</em>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="Active">Active</label><div title="Is this customer&#39;s account active. To disable/suspend a customer&#39;s account, uncheck this." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input checked="checked" class="check-box" data-val="true" data-val-required="The Active field is required." id="Active" name="Active" type="checkbox" value="true" />
+<span class="field-validation-valid" data-valmsg-for="Active" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="AdminComment">Admin comment</label><div title="Admin comment. For internal use." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<textarea class="form-control" rows="4" cols="20" data-val="true" data-val-length="&#x27;Admin Comment&#x27; must be between 0 and 2147483647 characters." data-val-length-max="2147483647" data-val-length-min="0" id="AdminComment" name="AdminComment">
+</textarea>
+<span class="field-validation-valid" data-valmsg-for="AdminComment" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="RegisteredInStore">Registered in the store</label><div title="Indicating in which store the customer is registered" data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="form-text-row">Your store name</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="LastIpAddress">IP Address</label><div title="The last used IP address." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="form-text-row"></div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="CreatedOn">Created on</label><div title="The date the customer record is created." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="form-text-row">2/23/2024 7:06:41 PM</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="LastActivityDate">Last activity</label><div title="The last activity date." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="form-text-row">2/23/2024 7:06:41 PM</div>
+</div>
+</div>
+</div>
+<div id="statesAlert-action-alert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="statesAlert-action-alert-title">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="statesAlert-action-alert-title">Information</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+<div class="additional-text" id="statesAlert-info"></div>
+Failed to retrieve states.
+</div>
+<div class="modal-footer">
+<span class="btn btn-primary float-right" data-dismiss="modal">Ok</span>
+</div>
+</div>
+</div>
+<div class="btn btn-default" id="statesAlert" style="display:none"></div><script type="e0b7c4ddfaa26140236d0469-text/javascript">$(document).ready(function () {$('#statesAlert').attr("data-toggle", "modal").attr("data-target", "#statesAlert-action-alert")});</script></div></div></nop-card>
+<nop-card><div class="card card-secondary card-outline collapsed-card" data-card-name="customer-orders" data-hideAttribute="CustomerPage.HideOrdersBlock" id="customer-orders"><div class="card-header with-border clearfix"><div class="card-title"><i class="fas fa-cart-plus"></i>Orders</div><div class="card-tools float-right"><button class="btn btn-tool" data-card-widget="collapse" type="button"><i class="fa toggle-icon fa-plus"></i></button></div></div><div class="card-body">
+<table class="table table-bordered table-hover table-striped dataTable" width="100%" id="order-grid">
+</table>
+</div>
+</div></nop-card>
+<nop-card><div class="card card-secondary card-outline advanced-setting collapsed-card" data-card-name="customer-address" data-hideAttribute="CustomerPage.HideAddressesBlock" id="customer-address"><div class="card-header with-border clearfix"><div class="card-title"><i class="far fa-address-book"></i>Addresses</div><div class="card-tools float-right"><button class="btn btn-tool" data-card-widget="collapse" type="button"><i class="fa toggle-icon fa-plus"></i></button></div></div>
+<div class="card-body">
+<table class="table table-bordered table-hover table-striped dataTable" width="100%" id="customer-addresses-grid">
+</table>
+<div id="customer-addresses-grid_deleteConflict-action-alert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="customer-addresses-grid_deleteConflict-action-alert-title">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="customer-addresses-grid_deleteConflict-action-alert-title">Information</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+<div class="additional-text" id="customer-addresses-grid_deleteConflict-info"></div>
+</div>
+<div class="modal-footer">
+<span class="btn btn-primary float-right" data-dismiss="modal">Ok</span>
+</div>
+</div>
+</div>
+<div class="btn btn-default" id="customer-addresses-grid_deleteConflict" style="display:none"></div><script type="e0b7c4ddfaa26140236d0469-text/javascript">$(document).ready(function () {$('#customer-addresses-grid_deleteConflict').attr("data-toggle", "modal").attr("data-target", "#customer-addresses-grid_deleteConflict-action-alert")});</script></div>
+<div id="customer-addresses-grid_deleteCommonFailed-action-alert" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="customer-addresses-grid_deleteCommonFailed-action-alert-title">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="customer-addresses-grid_deleteCommonFailed-action-alert-title">Information</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<div class="modal-body">
+<div class="additional-text" id="customer-addresses-grid_deleteCommonFailed-info"></div>
+</div>
+<div class="modal-footer">
+<span class="btn btn-primary float-right" data-dismiss="modal">Ok</span>
+</div>
+</div>
+</div>
+<div class="btn btn-default" id="customer-addresses-grid_deleteCommonFailed" style="display:none"></div><script type="e0b7c4ddfaa26140236d0469-text/javascript">$(document).ready(function () {$('#customer-addresses-grid_deleteCommonFailed').attr("data-toggle", "modal").attr("data-target", "#customer-addresses-grid_deleteCommonFailed-action-alert")});</script></div>
+</div>
+<div class="card-body">
+<button type="button" class="btn btn-primary" onclick="if (!window.__cfRLUnblockHandlers) return false; location.href = '/Admin/Customer/AddressCreate?customerId=163'" data-cf-modified-e0b7c4ddfaa26140236d0469->
+Add new address
+</button>
+</div>
+</div></nop-card>
+<nop-card><div class="card card-secondary card-outline advanced-setting collapsed-card" data-card-name="customer-cart" data-hideAttribute="CustomerPage.HideShoppingCartAndWishlistBlock" id="customer-cart"><div class="card-header with-border clearfix"><div class="card-title"><i class="fas fa-shopping-cart"></i>Current shopping cart and wishlist</div><div class="card-tools float-right"><button class="btn btn-tool" data-card-widget="collapse" type="button"><i class="fa toggle-icon fa-plus"></i></button></div></div><div class="card-body">
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="CustomerShoppingCartSearchModel_ShoppingCartTypeId">Shopping cart type</label><div title="Choose a shopping cart type." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<select class="form-control" data-val="true" data-val-required="The Shopping cart type field is required." id="CustomerShoppingCartSearchModel_ShoppingCartTypeId" name="CustomerShoppingCartSearchModel.ShoppingCartTypeId"><option selected="selected" value="1">Shopping cart</option>
+<option value="2">Wishlist</option>
+</select>
+</div>
+</div>
+</div>
+<div class="card-body">
+<table class="table table-bordered table-hover table-striped dataTable" width="100%" id="currentshoppingcart-grid">
+</table>
+</div>
+</div></nop-card>
+<nop-card><div class="card card-secondary card-outline advanced-setting" data-card-name="customer-activitylog" data-hideAttribute="CustomerPage.HideActivityLogBlock" id="customer-activitylog"><div class="card-header with-border clearfix"><div class="card-title"><i class="fas fa-list-alt"></i>Activity log</div><div class="card-tools float-right"><button class="btn btn-tool" data-card-widget="collapse" type="button"><i class="fa toggle-icon fa-minus"></i></button></div></div>
+<div class="card-body">
+<table class="table table-bordered table-hover table-striped dataTable" width="100%" id="activitylog-grid">
+</table>
+</div>
+</div></nop-card>
+<nop-card><div class="card card-secondary card-outline advanced-setting" data-card-name="customer-impersonate" data-hideAttribute="CustomerPage.HidePlaceOrderBlock" id="customer-impersonate"><div class="card-header with-border clearfix"><div class="card-title"><i class="fas fa-shopping-basket"></i>Place order (impersonate)</div><div class="card-tools float-right"><button class="btn btn-tool" data-card-widget="collapse" type="button"><i class="fa toggle-icon fa-minus"></i></button></div></div>
+<div class="card-body">
+<ul class="common-list">
+<li>During the order placement process, you will see almost exactly what the customer would see while browsing this site, with the exception of the header menu (you will see the following text 'Impersonated as <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0c3d5d3d4cfcdc5d2e0c5cdc1c9cc8ec8c5d2c5">[email&#160;protected]</a> - finish session'). Navigate to the products the customer wants and add them to the cart exactly as the customer would, then use the 'Checkout' button to proceed through the usual checkout process.</li>
+<li>Note: Click 'finish session' link in order to finish this session</li>
+</ul>
+<button type="submit" name="impersonate" class="btn btn-primary">
+<i class="fas fa-shopping-cart"></i>
+Place order
+</button>
+</div></div></nop-card>
+<nop-card><div class="card card-secondary card-outline advanced-setting collapsed-card" data-card-name="customer-backinstock" data-hideAttribute="CustomerPage.HideBackInStockSubscriptionsBlock" id="customer-backinstock"><div class="card-header with-border clearfix"><div class="card-title"><i class="fas fa-plus-square"></i>Back in stock subscriptions</div><div class="card-tools float-right"><button class="btn btn-tool" data-card-widget="collapse" type="button"><i class="fa toggle-icon fa-plus"></i></button></div></div>
+<div class="card-body">
+<table class="table table-bordered table-hover table-striped dataTable" width="100%" id="backinstock-subscriptions-grid">
+</table>
+</div>
+</div></nop-card>
+<nop-card><div class="card card-secondary card-outline advanced-setting collapsed-card" data-card-name="customer-notes" data-hideAttribute="CustomerPage.HideRewardPointsBlock" id="customer-notes"><div class="card-header with-border clearfix"><div class="card-title"><i class="fas fa-coins"></i>Reward points</div><div class="card-tools float-right"><button class="btn btn-tool" data-card-widget="collapse" type="button"><i class="fa toggle-icon fa-plus"></i></button></div></div><div class="card-body">
+<table class="table table-bordered table-hover table-striped dataTable" width="100%" id="customer-rewardpoints-grid">
+</table>
+<div class="card card-default no-margin">
+<div class="card-header">
+Add (reduce) points
+</div>
+<div class="card-body">
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="AddRewardPoints_Points">Points</label><div title="Enter points to add. Negative values are also supported (reduce points)." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input type="number" data-val="true" data-val-required="The Points field is required." id="AddRewardPoints_Points" name="AddRewardPoints.Points" value="0" /><input name="__Invariant" type="hidden" value="AddRewardPoints.Points" /><input name="__Invariant" type="hidden" value="AddRewardPoints.Points" />
+<span class="field-validation-valid" data-valmsg-for="AddRewardPoints.Points" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="AddRewardPoints_PointsValidity">Points validity</label><div title="Specify number of days when the awarded points will be valid (only for positive amount of points)." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input type="number" id="AddRewardPoints_PointsValidity" name="AddRewardPoints.PointsValidity" value /><input name="__Invariant" type="hidden" value="AddRewardPoints.PointsValidity" /><input name="__Invariant" type="hidden" value="AddRewardPoints.PointsValidity" />
+<span class="field-validation-valid" data-valmsg-for="AddRewardPoints.PointsValidity" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="AddRewardPoints_Message">Message</label><div title="Enter message (comment)." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input class="form-control text-box single-line" id="AddRewardPoints_Message" name="AddRewardPoints.Message" placeholder="Some comment here..." type="text" value />
+<span class="field-validation-valid" data-valmsg-for="AddRewardPoints.Message" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="AddRewardPoints_StoreId">Store</label><div title="Choose a store. It&#39;s useful only when you have &quot;Points accumulated for all stores&quot; setting disabled." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<select class="form-control" data-val="true" data-val-required="The Store field is required." id="AddRewardPoints_StoreId" name="AddRewardPoints.StoreId"><option selected="selected" value="1">Your store name</option>
+<option value="2">Test store 2</option>
+</select>
+<span class="field-validation-valid" data-valmsg-for="AddRewardPoints.StoreId" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="AddRewardPoints_ActivatePointsImmediately">Activate points immediately</label><div title="Activate bonus points immediately after they are added." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input checked="checked" class="check-box" data-val="true" data-val-required="The Activate points immediately field is required." id="AddRewardPoints_ActivatePointsImmediately" name="AddRewardPoints.ActivatePointsImmediately" type="checkbox" value="true" />
+<span class="field-validation-valid" data-valmsg-for="AddRewardPoints.ActivatePointsImmediately" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row" id="pnl-activating-delay">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="AddRewardPoints_ActivationDelay">Reward points activation</label><div title="Specify how many days (hours) must elapse before earned points become active." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<div class="row">
+<div class="col-md-3">
+<input type="number" data-val="true" data-val-required="The Reward points activation field is required." id="AddRewardPoints_ActivationDelay" name="AddRewardPoints.ActivationDelay" value="0" /><input name="__Invariant" type="hidden" value="AddRewardPoints.ActivationDelay" /><input name="__Invariant" type="hidden" value="AddRewardPoints.ActivationDelay" />
+<span class="field-validation-valid" data-valmsg-for="AddRewardPoints.ActivationDelay" data-valmsg-replace="true"></span>
+</div>
+<div class="col-md-3">
+<select class="form-control" data-val="true" data-val-required="The ActivationDelayPeriodId field is required." id="AddRewardPoints_ActivationDelayPeriodId" name="AddRewardPoints.ActivationDelayPeriodId" style="max-width: 200px;"><option selected="selected" value="0">Hours</option>
+<option value="1">Days</option>
+</select>
+<span class="field-validation-valid" data-valmsg-for="AddRewardPoints.ActivationDelayPeriodId" data-valmsg-replace="true"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-9 offset-md-3">
+<button type="button" id="addRewardPoints" class="btn btn-primary">Add (reduce) reward points</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></nop-card>
+</nop-cards>
+</div>
+</div>
+</section>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8IiSoo1ocrtFvurdsk63e1Qjy9vs_7f5ebu3nuLiExHWXCghBllD7qy7PUphHzIes-VncLnYG6tm7Xw-3GdyS479Dxsqj5IXXPzlZXkSLfRvrft0Nk663fQjM7IZGHW8yb43Sc3ITwAkP3Hy0RInuGHJJH0jUHgqRQ9xaBDnY9Hk_sQ1C9mFcYCiNSjMrPneow" /><input name="IsTaxExempt" type="hidden" value="false" /><input name="Active" type="hidden" value="false" /><input name="AddRewardPoints.ActivatePointsImmediately" type="hidden" value="false" /></form>
+<div id="customermodel-Delete-delete-confirmation" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="customermodel-Delete-delete-confirmation-title">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="customermodel-Delete-delete-confirmation-title">Are you sure?</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<form action="/Admin/Customer/Delete/163" method="post">
+<div class="form-horizontal">
+<div class="modal-body">
+Are you sure you want to delete this item?
+</div>
+<div class="modal-footer">
+<span class="btn btn-default" data-dismiss="modal">No, cancel</span>
+<button type="submit" class="btn btn-danger float-right">
+Delete
+</button>
+</div>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8IiSoo1ocrtFvurdsk63e1Qjy9vs_7f5ebu3nuLiExHWXCghBllD7qy7PUphHzIes-VncLnYG6tm7Xw-3GdyS479Dxsqj5IXXPzlZXkSLfRvrft0Nk663fQjM7IZGHW8yb43Sc3ITwAkP3Hy0RInuGHJJH0jUHgqRQ9xaBDnY9Hk_sQ1C9mFcYCiNSjMrPneow" /></form>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="e0b7c4ddfaa26140236d0469-text/javascript">$(document).ready(function () {$('#customer-delete').attr("data-toggle", "modal").attr("data-target", "#customermodel-Delete-delete-confirmation")});</script></div>
+<div id="sendemail-window" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="sendemail-window-title">
+<div class="modal-dialog modal-lg">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="sendemail-window-title">Send email</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<form method="post" action="/Admin/Customer/SendEmail">
+<input type="hidden" type="hidden" id="SendEmail_Id" data-val="true" data-val-required="The Id field is required." name="Id" value="163" />
+<div class="form-horizontal">
+<div class="modal-body">
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="SendEmail_Subject">The subject</label><div title="Enter the subject of email." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input class="form-control text-box single-line" id="SendEmail_Subject" name="SendEmail.Subject" type="text" value />
+<span class="field-validation-valid" data-valmsg-for="SendEmail.Subject" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="SendEmail_Body">The email body</label><div title="Enter the message." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<textarea class="form-control" rows="4" cols="20" id="SendEmail_Body" name="SendEmail.Body">
+</textarea>
+<span class="field-validation-valid" data-valmsg-for="SendEmail.Body" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="SendEmail_SendImmediately">Send immediately</label><div title="Send message immediately." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input checked="checked" class="check-box" data-val="true" data-val-required="The Send immediately field is required." id="SendEmail_SendImmediately" name="SendEmail.SendImmediately" type="checkbox" value="true" />
+<span class="field-validation-valid" data-valmsg-for="SendEmail.SendImmediately" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row" id="pnl-send-date">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="SendEmail_DontSendBeforeDate">Planned date of sending</label><div title="The specific send date and time." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input id="SendEmail_DontSendBeforeDate" name="SendEmail.DontSendBeforeDate" />
+<span class="field-validation-valid" data-valmsg-for="SendEmail.DontSendBeforeDate" data-valmsg-replace="true"></span>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary">
+Send email
+</button>
+</div>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8IiSoo1ocrtFvurdsk63e1Qjy9vs_7f5ebu3nuLiExHWXCghBllD7qy7PUphHzIes-VncLnYG6tm7Xw-3GdyS479Dxsqj5IXXPzlZXkSLfRvrft0Nk663fQjM7IZGHW8yb43Sc3ITwAkP3Hy0RInuGHJJH0jUHgqRQ9xaBDnY9Hk_sQ1C9mFcYCiNSjMrPneow" /><input name="SendEmail.SendImmediately" type="hidden" value="false" /></form>
+</div>
+</div>
+</div>
+<div id="sendprivatemessage-window" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="sendprivatemessage-window-title">
+<div class="modal-dialog">
+<div class="modal-content">
+<div class="modal-header">
+<h4 class="modal-title" id="sendprivatemessage-window-title">Send private message</h4>
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+</div>
+<form method="post" action="/Admin/Customer/SendPm">
+<input type="hidden" type="hidden" id="SendPm_Id" data-val="true" data-val-required="The Id field is required." name="Id" value="163" />
+<div class="form-horizontal">
+<div class="modal-body">
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="SendPm_Subject">The subject</label><div title="Enter the subject of PM." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<input class="form-control text-box single-line" id="SendPm_Subject" name="SendPm.Subject" type="text" value />
+<span class="field-validation-valid" data-valmsg-for="SendPm.Subject" data-valmsg-replace="true"></span>
+</div>
+</div>
+<div class="form-group row">
+<div class="col-md-3">
+<div class="label-wrapper"><label class="col-form-label" for="SendPm_Message">The message</label><div title="Enter the message of PM." data-toggle="tooltip" class="ico-help"><i class="fas fa-question-circle"></i></div></div>
+</div>
+<div class="col-md-9">
+<textarea class="form-control" rows="4" cols="20" id="SendPm_Message" name="SendPm.Message">
+</textarea>
+<span class="field-validation-valid" data-valmsg-for="SendPm.Message" data-valmsg-replace="true"></span>
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary">
+Send private message
+</button>
+</div>
+</div>
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8IiSoo1ocrtFvurdsk63e1Qjy9vs_7f5ebu3nuLiExHWXCghBllD7qy7PUphHzIes-VncLnYG6tm7Xw-3GdyS479Dxsqj5IXXPzlZXkSLfRvrft0Nk663fQjM7IZGHW8yb43Sc3ITwAkP3Hy0RInuGHJJH0jUHgqRQ9xaBDnY9Hk_sQ1C9mFcYCiNSjMrPneow" /></form>
+</div>
+</div>
+</div>
+</div>
+<div class="main-footer">
+<div class="container-fluid">
+<div class="col-md-12">
+<div class="row">
+<div class="col-md-4 col-xs-12 text-md-left text-center">
+Powered by <a href="https://www.nopcommerce.com/?utm_source=demo-admin-panel&amp;utm_medium=footer&amp;utm_campaign=admin-panel" target="_blank">nopCommerce</a>
+</div>
+<div class="col-md-4 col-xs-12 text-center">
+Friday, February 23, 2024 7:20 PM
+</div>
+<div class="col-md-4 col-xs-12 text-md-right text-center">
+<b>nopCommerce version 4.60.0</b>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+
+        <!-- /.card-body -->
+        <div class="card-footer">
+          Footer
+        </div>
+        <!-- /.card-footer-->
+      </div>
+      <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+      <b>Version</b> 3.2.0
+    </div>
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io">AdminLTE.io</a>.</strong> All rights reserved.
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+
+
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- DataTables  & Plugins -->
+<script src="plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="plugins/jszip/jszip.min.js"></script>
+<script src="plugins/pdfmake/pdfmake.min.js"></script>
+<script src="plugins/pdfmake/vfs_fonts.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- Page specific script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true, "lengthChange": false, "autoWidth": false,
+      "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+    }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+
+
+
+
+</body>
+</html>
