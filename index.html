@@ -36,6 +36,7 @@
       <section class="before-nav container d-flex" >
 
          <li class="nav__item_lang">
+            <label for="">Select language</label>
             <select class="nav__select nav__item_lang" id="languageSelector">
                <option value="http://lumina.sulaslansetiawan.cfd/" class="nav__link" data-href="http://lumina.sulaslansetiawan.cfd/">English</option>
                <option value="http://luminajp.sulaslansetiawan.cfd/" class="nav__link" data-href="http://luminajp.sulaslansetiawan.cfd/" selected>Japanese</option>
@@ -45,7 +46,7 @@
 
          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
          <li class="nav__item_lang" >
-            <span>indonesia</span>
+            <span>English</span>
          </li>
 
 
@@ -1058,13 +1059,6 @@
     document.addEventListener("DOMContentLoaded", function() {
       var languageSelector = document.getElementById('languageSelector');
 
-      // Retrieve the selected language from localStorage
-      var selectedLanguage = localStorage.getItem('selectedLanguage');
-
-      // If a language is saved in localStorage, set it as the selected option
-      if (selectedLanguage) {
-        languageSelector.value = selectedLanguage;
-      }
 
       // Add an event listener to handle changes in the selected option
       languageSelector.addEventListener('change', function() {
@@ -1074,8 +1068,6 @@
           window.location.href = url;
         }
 
-        // Save the selected language to localStorage
-        localStorage.setItem('selectedLanguage', this.value);
       });
     });
   </script>
