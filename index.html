@@ -35,11 +35,11 @@
    <header class="header" id="header">
       <section class="before-nav container d-flex" >
 
-         <li class="nav__item_lang" >
-            <select class="nav__select nav__item_lang ">
-               <option value=""  class="nav__link">English </option>
-               <option value="" class="nav__link">Japanese</option>
-               <option value="" class="nav__link">Indonesian</option>
+         <li class="nav__item_lang">
+            <select class="nav__select nav__item_lang" id="languageSelector">
+               <option value="http://lumina.sulaslansetiawan.cfd/" class="nav__link" data-href="http://lumina.sulaslansetiawan.cfd/">English</option>
+               <option value="http://luminajp.sulaslansetiawan.cfd/" class="nav__link" data-href="http://luminajp.sulaslansetiawan.cfd/" selected>Japanese</option>
+               <option value="#" class="nav__link" data-href="#">Indonesian</option>
             </select>
          </li>
 
@@ -1052,6 +1052,33 @@
 
 
 <!-- ================================== END GSAP -->
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var languageSelector = document.getElementById('languageSelector');
+
+      // Retrieve the selected language from localStorage
+      var selectedLanguage = localStorage.getItem('selectedLanguage');
+
+      // If a language is saved in localStorage, set it as the selected option
+      if (selectedLanguage) {
+        languageSelector.value = selectedLanguage;
+      }
+
+      // Add an event listener to handle changes in the selected option
+      languageSelector.addEventListener('change', function() {
+        var selectedOption = this.options[this.selectedIndex];
+        var url = selectedOption.getAttribute('data-href');
+        if (url !== "#") {
+          window.location.href = url;
+        }
+
+        // Save the selected language to localStorage
+        localStorage.setItem('selectedLanguage', this.value);
+      });
+    });
+  </script>
 
 
 </body>
