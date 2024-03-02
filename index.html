@@ -151,6 +151,98 @@
 
    <!--==================== MAIN ====================-->
    <main class="main">
+
+      <!--==================== ChatBot dialog  ====================-->
+      <div class="chatbot" id="chatbotPopup">
+         <button class="close" onclick="closeChatbotPopup()">✖</button>
+         <img src="assets/chatbot_lumina.png" alt="chatbot-img" />
+         <h2>Hai ! , I am Lumina Chatbot !</h2>
+         <p>We use Chatbot for improving user experience, analytics, and marketing.</p>
+         <button class="accept" onclick="showChatbotPopup1()">Let's Chat!</button>
+      </div>
+
+      <div class="chatbot1 " id="chatbotPopup1">
+         <div class="row container d-flex justify-content-center">
+             
+              <div class="box box-warning direct-chat direct-chat-warning" >
+                <div class="box-header with-border " style="display:flex;">
+                  <h3 class="box-title">Chat Messages</h3>
+
+                  <div class="box-tools pull-right">
+                    <button type="button" onclick="closeChatbotPopup1()" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i>
+                    </button>
+                  </div>
+                </div>
+              
+                <div class="box-body" style="width:350px;" >
+                  
+                  <div class="direct-chat-messages"  >
+                
+                    <div class="direct-chat-msg " style="background-color:hsl(15, 60%, 52%);; padding:15px;">
+                      <div class="direct-chat-info clearfix">
+                        <span class="direct-chat-name pull-left " style="background-color:purple;color:white;font-size;bolder;">Lumina Chatbot</span>
+                        <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                      </div>
+                        <div style="display:flex;">
+                           <img class="direct-chat-img" style="width:35px;" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="message user image">
+                        
+                           <div class="direct-chat-text" style="text-align:left;">
+                              <h5>Welcome to Lumina Lamp Store Service! </h5>
+                           </div> 
+                           
+                        </div>
+                        
+                           <div class="direct-chat-text" style="text-align:left;">
+                              🌟 <u><a href="#popular">Popular Product</a></u> 
+                              🌟 <u><a href="#products">Our Product</a></u> 
+                              🌟 <u><a href="/product_more">Advanced Search Product</a></u> 
+                           </div> 
+                    </div>
+                    
+                     <div class="direct-chat-msg right"  style="background-color:hsl(20, 68%, 80%) ; padding-top:2px;">
+                      <div class="direct-chat-info clearfix" style="text-align:right;">
+                        <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
+                        <span class="direct-chat-name pull-right" style="background-color:purple;color:white;font-size;bolder;">Sarah</span>
+                      </div>
+                        <div style="display:flex;justify-content: flex-end;">
+                           
+                           <div class="direct-chat-text" style="text-align:right;">
+                              <h5>Hello </h5>
+                           </div>
+                           <img class="direct-chat-img" style="width:35px;" src="https://img.icons8.com/office/36/000000/person-female.png" alt="message user image">
+
+                        </div>
+                     </div>
+                   
+
+                  </div>
+                 
+                </div>
+               
+                <div class="box-footer" style="background-color:#f0f0f0; margin-top:5px;">
+                  <form action="#" method="post">
+                    <div class="input-group">
+                      <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+                      <span class="input-group-btn">
+                            <button type="button" class="btn btn-warning btn-flat">Send</button>
+                          </span>
+                    </div>
+                  </form>
+                </div>
+             
+              </div>
+           
+         </div>
+      </div> 
+
+      <div class="chatbot-image" onclick="showChatbotPopup1()">
+         <img src="assets/chatbot_lumina.png" onclick="showChatbotPopup1()" alt="chatbot-img" />
+      </div>
+
+
+      <!--==================== End ChatBot dialog ====================-->
+      
+
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
          <div class="home__bg"></div>
@@ -944,6 +1036,40 @@
    <a href="#" class="scrollup" id="scroll-up">
       <i class="ri-arrow-up-line"></i>
    </a>
+
+   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+   <script>
+
+         // Function to close the popup
+         function closeChatbotPopup() {
+               document.getElementById('chatbotPopup').style.display = 'none';
+         }
+         function closeChatbotPopup1() {
+               document.getElementById('chatbotPopup1').style.display = 'none';
+         }
+
+         // Function to show the popup after a delay
+         function showChatbotPopup() {
+               setTimeout(function () {
+                  document.getElementById('chatbotPopup').style.display = 'flex';
+               }, 1000);
+         }
+         // Function to show the popup after a delay
+         function showChatbotPopup1() {
+               setTimeout(function () {
+                  document.getElementById('chatbotPopup1').style.display = 'flex';
+                  document.getElementById('chatbotPopup').style.display = 'none';
+               }, 1000);
+         }
+   </script>
+   <script>
+      $(document).ready(function() {
+
+         showChatbotPopup();
+         document.getElementById('chatbotPopup1').style.display = 'none';
+
+      });
+   </script>
 
    <!--=============== SCROLLREVEAL ===============-->
    <script src="assets/js/scrollreveal.min.js"></script>
